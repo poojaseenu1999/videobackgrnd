@@ -1,0 +1,95 @@
+<hmtl>
+    <head>
+
+        <title>video background</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css" />
+
+    </head>
+    <body>
+       <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        body {
+          margin: 0;
+          font-family: Arial;
+          font-size: 17px;
+        }
+        
+        #myVideo {
+          position: fixed;
+          right: 0;
+          bottom: 0;
+          min-width: 100%; 
+          min-height: 100%;
+        }
+        
+        .content {
+          position: fixed;
+          bottom: 0;
+          background: rgba(0, 0, 0, 0.5);
+          color: #f1f1f1;
+          width: 100%;
+          padding: 20px;
+        }
+        
+        #myBtn {
+          width: 200px;
+          font-size: 18px;
+          padding: 10px;
+          border: none;
+          background: #000;
+          color: black;
+          cursor: pointer;
+          background-color: white;
+        }
+        
+        #myBtn:hover {
+          background: #ddd;
+          color: black;
+        }
+        </style>
+        </head>
+        <body>
+        
+        <video autoplay muted loop id="myVideo">
+          <source src="video.mp4" type="video/mp4">
+         
+        </video>
+        
+        <div class="content">
+         <center><h1>POOJA SRINIVASAN</h1></center>
+       
+        <div class="button">
+        <center>
+        <p>AN UNDERGRADUATE IN COMPUTER SCIENCE AND ENGINEERING AT PANIMALAR INSTITUTE OF TECHNOLOGY.</p>
+        <form action="myself.html" >
+        <button class="button1" type="submit" >myself</button></form>
+        <form action="skills.html">
+        <button class="button1" type="submit">my skills</button><br></form>
+        <center><a href="images/mountain.jpg" download="mountain">download resume</a></center></div>
+          <button id="myBtn" onclick="myFunction()">Pause</button>
+        </div>
+    </div>
+        
+        <script>
+        var video = document.getElementById("myVideo");
+        var btn = document.getElementById("myBtn");
+        
+        function myFunction() {
+          if (video.paused) {
+            video.play();
+            btn.innerHTML = "Pause";
+          } else {
+            video.pause();
+            btn.innerHTML = "Play";
+          }
+        }
+        </script>
+        
+   
+   
+    </body>
+</hmtl>
